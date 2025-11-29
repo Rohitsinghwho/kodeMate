@@ -1,9 +1,13 @@
 import React from 'react'
 
 const Header = () => {
+
+    const handleCodeExecution=()=>{
+        console.log("Working")
+    }
   return (
-    <nav>
-        
+    <nav className='nav'>
+        <button onClick={handleCodeExecution}>Run</button>
     </nav>
   )
 }

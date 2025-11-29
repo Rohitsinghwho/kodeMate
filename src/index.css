@@ -1,0 +1,23 @@
+.EditorLayout{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.codeEditor{
+    height:300px;
+    width: 100%;
+}
+
+.editor{
+    height: 300px;
+    width: 500px;
+    border: 1px solid grey;
+    overflow: scroll;
+    scrollbar-width: thin;
+}
+
+.txt-sm{
+    height: 1.5rem;
+    color: grey;
+}

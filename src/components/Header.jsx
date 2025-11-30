@@ -1,9 +1,24 @@
-import React from 'react'
-
+import React, { useContext } from 'react'
+import EditorContext from '../context/EditorContext'
 const Header = () => {
-
+    const {code}=useContext(EditorContext)
     const handleCodeExecution=()=>{
-        console.log("Working")
+       code.setParsedCode(`
+        <!DOCTYPE html>
+        <html>
+          <head>
+              <title>document</title>
+              <style>${code.cssCode}</style>
+          </head>
+          <body>
+            ${code.htmlCode}
+            <script>
+            ${code.jsCode}
+            </script>
+          </body>
+        </html>
+        
+        `);
     }
   return (
     <nav className='nav'>

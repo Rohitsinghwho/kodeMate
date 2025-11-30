@@ -5,7 +5,7 @@ import {EditorState} from "@codemirror/state"
 import {javascript} from "@codemirror/lang-javascript"
 import {html} from "@codemirror/lang-html"
 import {css} from "@codemirror/lang-css"
-import { useEffect,useRef,useState } from 'react'
+import { useEffect,useState } from 'react'
 
 const getExtension=(language)=>{
     switch(language){
@@ -15,9 +15,9 @@ const getExtension=(language)=>{
         default: return [javascript()];
     }
 }
-export const useCodeMirror = ({value,onChange,language="js"}) => {
+export const useCodeMirror = ({ref,value,onChange,language="js"}) => {
   
-    const ref= useRef(null);
+   
     const [editor,setEditor]=useState(null);
 
     useEffect(()=>{
@@ -64,6 +64,5 @@ export const useCodeMirror = ({value,onChange,language="js"}) => {
         setEditor(view);
         return ()=>view.destroy()
     },[])
-
-    return {ref};
+    return null;
 }

@@ -4,14 +4,18 @@ import EditorContext from '../../context/EditorContext'
 const ExecutionContainer = () => {
   const {code}= useContext(EditorContext);
   return (
+    <div className='browser'>
+    <span className='txt-sm'>Your Browser &hearts;</span>
     <iframe
+    className='browserframe'
+    width={'80%'}
     title='Your Browser'
-    width={"100%"}
     height={"300px"}
     sandbox='allow-scripts'
     srcDoc={code.parsedCode}
     >
     </iframe>
+    </div>
   )
 }
 

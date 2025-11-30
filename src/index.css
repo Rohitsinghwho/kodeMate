@@ -1,7 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    background-color:aliceblue;
+}
 .EditorLayout{
     display: flex;
     gap: 10px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .codeEditor{
@@ -18,6 +28,35 @@
 }
 
 .txt-sm{
-    height: 1.5rem;
-    color: grey;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav{
+    height: 8vh;
+    display: flex;
+    background-color: white;
+    align-items: center;
+}
+.nav button{
+    font-size: 1.3rem;
+    padding: 6px 50px;
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(26, 26, 247);
+    box-shadow: 4px 2px 5px rgb(26, 26, 247);
+}
+
+.browser{
+    margin-top:10px;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.browserframe{
+    border: 1px solid black;
 }
